@@ -1,2 +1,2 @@
-# LunaLibrary
-A somewhat common Library for NodeJS/Web
+# Skol
+Some kind of library
