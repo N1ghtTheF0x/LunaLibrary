@@ -1,0 +1,27 @@
+{
+  "name": "skol",
+  "version": "1.0.0",
+  "description": "Some kind of Library for NodeJS/Browser",
+  "main": "src/index.ts",
+  "scripts": {
+    "build:web:release": "browserify -p [ tsify ] src/index.ts > dist/bundle.js",
+    "build:web:debug": "browserify -p [ tsify ] -d src/index.ts > dist/bundle.dev.js",
+    "test:node": "ts-node test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N1ghtTheF0x/Skol.git"
+  },
+  "author": "N1ghtTheF0x",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/N1ghtTheF0x/Skol/issues"
+  },
+  "homepage": "https://github.com/N1ghtTheF0x/Skol#readme",
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "ts-node": "^10.7.0",
+    "tsify": "^5.0.4",
+    "typescript": "^4.6.3"
+  }
+}
