@@ -1,28 +1,25 @@
-export * as ANSI from "./ansi"
+export * from "./ansi"
+export * from "./screen"
 
-export interface IColor
+export class Color implements Color.JSON
 {
     red: number
     green: number
     blue: number
     alpha: number
-}
-
-export class Color implements IColor
-{
-    red: number
-    green: number
-    blue: number
-    alpha: number
+    static fromJSON(obj: Color.JSON)
+    {
+        return new Color(obj.red,obj.green,obj.blue,obj.alpha)
+    }
     constructor(r: number,g: number,b: number,a?: number)
     constructor(hex: string)
     constructor(a: number | string,b?: number,c?: number,d: number = 255)
     {
         if(typeof a == "number")
         {
-            this.red = a
-            this.green = b
-            this.blue = c
+            this.red = a ?? 0
+            this.green = b ?? 0
+            this.blue = c ?? 0
             this.alpha = d
         }
         else
@@ -42,7 +39,7 @@ export class Color implements IColor
             }
         }
     }
-    toString(type: Type = "rgba")
+    toString(type: Color.Type = "rgba")
     {
         if(type == "rgb") return `rgb(${this.red},${this.green},${this.blue})`
         if(type == "rgba") return `rgba(${this.red},${this.green},${this.blue},${this.alpha})`
@@ -50,7 +47,7 @@ export class Color implements IColor
         if(type == "hexa") return `#${this.red.toString(16)}${this.green.toString(16)}${this.blue.toString(16)}${this.alpha.toString(16)}`
         throw new TypeError(`"${type}" is not a valid type! Possible types: "rgb" | "rgba" | "hex" | "hexa"`)
     }
-    toJSON(): IColor
+    toJSON(): Color.JSON
     {
         return {
             red: this.red,
@@ -61,4 +58,14 @@ export class Color implements IColor
     }
 }
 
-export type Type = "rgb" | "rgba" | "hex" | "hexa"
+export namespace Color
+{
+    export interface JSON
+    {
+        red: number
+        green: number
+        blue: number
+        alpha: number
+    }
+    export type Type = "rgb" | "rgba" | "hex" | "hexa"
+}
