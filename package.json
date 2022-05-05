@@ -1,6 +1,6 @@
 {
   "name": "skol",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Some kind of Library for NodeJS/Browser",
   "main": "dist/index.js",
   "scripts": {
@@ -29,5 +29,9 @@
   },
   "browser": "./dist/bundle.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist/**/*.js","dist/**/*.js.map","dist/**/*.d.ts"]
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "dist/**/*.d.ts"
+  ]
 }
