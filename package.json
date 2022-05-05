@@ -9,7 +9,7 @@
     "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir dist",
     "build:all": "npm run build:web && npm run build:node && npm run build:types",
     "test:node": "ts-node test.ts",
-    "postinstall": "npm run build:all"
+    "prepublish": "npm run build:all"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,6 @@
     "typescript": "^4.6.3"
   },
   "browser": "./dist/bundle.js",
-  "types": "./dist/index.d.ts"
+  "types": "./dist/index.d.ts",
+  "files": ["dist/**/*.js","dist/**/*.js.map","dist/**/*.d.ts"]
 }

@@ -151,3 +151,35 @@ export namespace Raw
         }
     }
 }
+/**
+ * Bytes = 1,Bits = 8
+ */
+export type int8_t = number
+/**
+ * Bytes = 1,Bits = 8
+ */
+export type uint8_t = number
+/**
+ * Bytes = 2,Bits = 16
+ */
+export type int16_t = number
+/**
+ * Bytes = 2,Bits = 16
+ */
+export type uint16_t = number
+/**
+ * Bytes = 4,Bits = 32
+ */
+export type int32_t = number
+/**
+ * Bytes = 4,Bits = 32
+ */
+export type uint32_t = number
+/**
+ * Bytes = 8,Bits = 64
+ */
+export type int64_t = bigint
+/**
+ * Bytes = 8,Bits = 64
+ */
+export type uint64_t = bigint
