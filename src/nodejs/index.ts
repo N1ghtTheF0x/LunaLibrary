@@ -13,4 +13,3 @@ export namespace NodeJS
 }
 
 export * from "./term"
-export * from "./thread"
