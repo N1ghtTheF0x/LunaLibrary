@@ -33,5 +33,10 @@
     "dist/**/*.js",
     "dist/**/*.js.map",
     "dist/**/*.d.ts"
+  ],
+  "keywords": [
+    "library",
+    "nodejs",
+    "browser"
   ]
 }

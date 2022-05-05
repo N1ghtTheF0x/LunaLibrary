@@ -5,10 +5,10 @@ Always when I make something in TypeScript, I always implement the same thing ov
 ## Install
 Just install it like any other package:
 ```sh
-npm install git+https://github.com/N1ghtTheF0x/Skol.git
+npm install skol
 ```
 ```sh
-yarn add git+https://github.com/N1ghtTheF0x/Skol.git
+yarn add skol
 ```
 ## Content
  - Type safe
